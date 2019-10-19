@@ -42,14 +42,14 @@ var App = {
     },
 
     initContract: () => {
-        $.getJSON('StarkTokenSale.json', (tokenSaleContract) => {
+        $.getJSON('contracts/StarkTokenSale.json', (tokenSaleContract) => {
             App.contracts.tokenSaleContract = TruffleContract(tokenSaleContract)
             App.contracts.tokenSaleContract.setProvider(web3.currentProvider)
             App.contracts.tokenSaleContract.deployed().then((instance) => {
                 console.log("StarkTokenSale Address: ", instance.address)
             })
 
-            $.getJSON('StarkToken.json', (tokenContract) => {
+            $.getJSON('contracts/StarkToken.json', (tokenContract) => {
                 App.contracts.tokenContract = TruffleContract(tokenContract)
                 App.contracts.tokenContract.setProvider(web3.currentProvider)
                 App.contracts.tokenContract.deployed().then((instance) => {
