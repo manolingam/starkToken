@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stark Token ICO Sale</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container" style="margin-top: 3%; width: 650px;">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="text-center">STARK TOKEN ICO SALE</h1>
+                <hr>
+                <br>
+                <div id="loader">Loading...</div>
+                <div id="content" style="display: none;">
+                    <p>
+                            Introducing Stark Token (STRK)! Token Price is <span id="price"></span> ETH. And you currently have <span id="ownedTokens"> </span> STRK.
+                    </p>
+                    <form role="form" onSubmit="App.buyToken(); return false;">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input id="numberOfTokens" class="form-control" type="number" name="tokens" value="1" min="1" pattern="[0-9]" >
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-primary">Buy Tokens</button>
+                                </span>
+                            </div>
+                        </div>
+                        <span id="tokensSold"></span> / <span id="totalTokens"></span> sold.
+                        <br>
+                        <br>
+                        <div class="progress">
+                            <div id="progress-bar" class="progress-bar progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <hr>
+                        <br>
+                        <span id="address"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./js/truffle-contract.min.js"></script>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
